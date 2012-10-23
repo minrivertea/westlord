@@ -1,0 +1,129 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	border:0 none;
+	font-size:100%;
+	margin:0;
+	outline:0 none;
+	padding:0
+}
+
+body {
+	border:medium none;
+	margin:0;
+	padding:0;
+	font-family: Arial, sans-serif;
+	width: 100%;
+}
+
+.super {
+  width: 960px;
+  position: relative;
+  margin-left: -480px;
+  left: 50%;	
+  float: left;
+}
+
+p {
+  line-height:2em;
+}
+
+ol, ul {
+	line-height:2em;
+}
+
+a:link, a:visited {
+  text-decoration: underline;	
+  color: #14a8c8;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+  color: #000;	
+}
+
+
+h1 {
+	font-size:40px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin: 0 0 15px 0;
+}
+
+h2 {
+    color: #000;
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: -2px;
+    margin: 10px 0 0px;
+    padding-top: 10px;
+}
+
+h3 {
+    color: #000000;
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin: 10px 0;
+    padding-top: 10px;
+}
+
+h4 {
+	color:black;
+	font-size:1em;
+	font-weight:bold;letter-spacing:-1px;margin:30px 0 10px;
+}
+
+
+/* header styles */
+
+#header {
+	float: left;
+	padding: 0px 0 0 0;
+	width:100%;
+	margin-bottom:10px;
+}
+
+#navigation {
+  float: right;
+  width: auto;	
+}
+
+#navigation ul {
+  list-style-type: none;	
+}
+
+#navigation ul li {
+  float: left;	
+}
+
+#navigation ul li a {
+  padding: 10px 15px;
+  font-size: 18px;	
+  letter-spacing: -0.5px;
+}
+
+#navigation ul li:last-child a {
+  padding-right: 0;	
+}
+
+
+/* END HEADER STYLES */
+
+/* FOOTER STYLES */
+#footer {
+  margin-top: 80px;
+  padding-bottom: 80px;
+  float: left;
+  width: 100%;	
+}
+
+#footer p.explain {
+    color: #999999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+    text-align: right;
+    width: 400px;
+}
+
+/* END FOOTER */

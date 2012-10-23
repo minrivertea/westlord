@@ -1,0 +1,6 @@
+*.pyc
+*.DS_Store
+NOTES
+sorl/
+
+local_settings.py
