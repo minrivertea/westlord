@@ -18,6 +18,8 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css" />
 	<script src="/js/jquery-1.8.1.min.js" type="text/javascript" /></script>
 	<script src="/js/jquery.tools.min.js" type="text/javascript" /></script>
+		<script src="/js/common.js" type="text/javascript"></script>
+
          
          <style type="text/css">
 
@@ -365,8 +367,57 @@ a.next:hover, a.prev:hover {
 $(document).ready( function() {
   $(".scrollable").scrollable({circular: true,});
 });
+</script>
+
+
+{% if request.user.is_superuser %}
+<script type="text/javascript">
+$(document).ready( function() {
+  
+    $('p, h2, h3, h4, h1').attr('contenteditable', 'true'); 
+
+  
+  $('[contenteditable]').live('focus', function() {
+      $('#editing').fadeIn();
+  });
+  
+  $('#savedraft').bind('click', function() {
+    var userVersion = new String($('#container').html());
+    localStorage['userEdits'] = userVersion;
+    $('#editing').append("<p>Draft saved!</p>");
+    return false;    
+  });
+  
+  $('#save').bind('click', function() {
+      
+      var thisVersion = $('#container').html();
+      $.ajax({
+        url: '{% url useredit %}',
+        type: 'POST',
+        data: {'new': thisVersion, 'lang': 'en'},
+        success: function() {
+            $('#editing').append("<p>All changes saved!</p>");
+            localStorage.clear();
+        }
+      });
+      return false;
+  });
+  
+  checkEdits();
+});
+
+function checkEdits() {        
+    if ( localStorage['userEdits'] ) {
+        $('#container').replaceWith(localStorage['userEdits']);
+    } 
+}
 
 </script>
+
+
+{% endif %}
+
+
 
 </body>
 </html>
