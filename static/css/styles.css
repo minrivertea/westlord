@@ -82,6 +82,21 @@ h4 {
 	margin-bottom:10px;
 }
 
+#logo {
+    color: #F1F1F1;
+    float: left;
+    font-family: Helvetica,sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    height: 40px;
+    left: 30px;
+    position: absolute;
+    text-transform: lowercase;
+    top: 6px;
+    width: auto;
+    z-index: -2;
+}
+
 #navigation {
   float: right;
   width: auto;	
