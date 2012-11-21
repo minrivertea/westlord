@@ -83,16 +83,16 @@ h4 {
 }
 
 #logo {
-    color: #F1F1F1;
+    color: #888888;
     float: left;
     font-family: Helvetica,sans-serif;
     font-size: 43px;
     font-weight: bold;
     height: 40px;
-    left: 30px;
+    left: 20px;
     position: absolute;
     text-transform: lowercase;
-    top: 26px;
+    top: 12px;
     width: auto;
     z-index: -2;
 }
