@@ -1,6 +1,7 @@
 {% load django_static %}
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="{% block meta-description %}{% endblock %}" />
@@ -16,9 +17,15 @@
 	<title>Westlord Decommissioning - {% block title %}{% endblock %}</title>
 	
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/styles.css' %}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/stylses.css' %}" />
 	<script src="{% staticfile '/js/jquery-1.8.1.min.js' %}" type="text/javascript" /></script>
 	<script src="{% staticfile '/js/jquery.tools.min.js' %}" type="text/javascript" /></script>
+	
+	<!--BOOTSTRAP FILES -->
+	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/bootstrap-responsive.min.css' %}" />
 
     {% block extracss %}{% endblock %}
     {% block extrahead %}{% endblock %}
@@ -28,7 +35,7 @@
 <body>
 
 <div id="header">
-  <div class="super">
+  <div class="container">
 		<div id="logo"></div>
 		<div id="navigation">
 			<ul>

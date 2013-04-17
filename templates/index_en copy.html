@@ -1,4 +1,6 @@
+{% load django_static %}
 
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -19,7 +21,11 @@
 	<script src="/js/jquery-1.8.1.min.js" type="text/javascript"></script>
 	<script src="/js/jquery.tools.min.js" type="text/javascript"></script>
 	<script src="/js/common.js" type="text/javascript"></script>
-         
+    
+    <!--BOOTSTRAP FILES -->
+	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/bootstrap-responsive.min.css' %}" />
+    
 <style type="text/css">
 #editing {
     background: none repeat scroll 0 0 #F1F1F1;
