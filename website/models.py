@@ -47,11 +47,3 @@ class Page(models.Model):
     def get_absolute_url(self):
         url = "/%s/" % self.slug  
         return url
-
-    def get_products_mentioned(self):
-        teas = Product.objects.filter(is_active=True)
-        products = []
-        for tea in teas:
-            if tea.name in self.content:
-                products.append(tea)
-        return products

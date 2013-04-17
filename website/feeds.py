@@ -1,5 +1,5 @@
 from django.contrib.syndication.feeds import Feed
-from westlord.website.models import *
+from website.models import *
 
 #class LatestEntries(Feed):
 #    title = "Latest Blog Posts on WestIsEast"

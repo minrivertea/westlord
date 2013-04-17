@@ -1,8 +1,7 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
 import django.views.static
-from westlord.website.feeds import *
-from westlord.website.models import *
+from website.models import *
 from django.contrib.sitemaps import GenericSitemap
 from django.views.generic.simple import direct_to_template
 
@@ -26,7 +25,7 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    (r'^', include('westlord.website.urls')),
+    (r'^', include('website.urls')),
     (r'^admin/', include(admin.site.urls)),
     (r'^robots\.txt$', 'direct_to_template', {'template': 'robots.txt', 'mimetype': 'text/plain'}),
       

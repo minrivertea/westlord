@@ -13,7 +13,7 @@ from time import time
 
 from bs4 import BeautifulSoup
 
-from westlord.website.models import *
+from website.models import *
 
 
 @csrf_exempt
