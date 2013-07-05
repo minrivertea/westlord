@@ -14,7 +14,7 @@
 	<meta name="DC.format" content="text/html" />
 	<meta name="DC.type" content="Django Site" />
 	<meta name="robots" content="ALL" />
-	<title>Westlord Associates - The Decommissioning Expertise Your Project Needs</title>
+	<title>Westlord Associates UK Ltd. - The Expertise Your Project Needs</title>
 	
 	
 	<script src="/js/jquery-1.8.1.min.js" type="text/javascript"></script>
@@ -231,7 +231,7 @@ h2.featurette {
   <div class="container">
     <div class="navbar navbar-inverse">
       <div class="navbar-inner">
-        <a class="brand">Westlord Associates Ltd.</a>
+        <a class="brand">Westlord Associates UK Ltd.</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
 				<li><a href="/">Home</a></li>
@@ -265,7 +265,7 @@ h2.featurette {
     <div class="row">
 		<div class="span4">
 			<h2>A quick introduction</h2>
-			<p>Westlord Associates Ltd was formed in 1999 to carry out assignments in providing project management consultancy, asset management, execution of major projects and expert advice to clients throughout Europe and internationally. <br/><a href="#about">Read more &raquo;</a></p>
+			<p>Westlord Associates was formed in 1999 to carry out assignments in providing project management consultancy, asset management, execution of major projects and expert advice to clients throughout Europe and internationally. <br/><a href="#about">Read more &raquo;</a></p>
 		</div>
 		
 		<div class="span4">
@@ -275,7 +275,7 @@ h2.featurette {
 		
 		<div class="span4">
 			<h2>How we can help you</h2>
-			<p>Westlord Associates has an excellent knowledge of the UK and worldwide decommissioning market and contacts at the highest level in a wide range of operators and supply chain companies.<br/><a href="#case－studies">Read case studies for examples of our work</a> or just <a href="#contact">contact us immediately</a></p>
+			<p>Westlord Associates has an excellent knowledge of the UK and worldwide oil & gas market and contacts at the highest level in a wide range of operators and supply chain companies.<br/><a href="#case－studies">Read case studies for examples of our work</a> or just <a href="#contact">contact us immediately</a></p>
 		</div>
 	</div>
 </div>	
@@ -416,54 +416,6 @@ h2.featurette {
 <script type="text/javascript">
 $('.carousel').carousel('pause')
 </script>
-
-
-{% if request.user.is_superuser %}
-<script type="text/javascript">
-$(document).ready( function() {
-  
-    $('p, h2, h3, h4, h1').attr('contenteditable', 'true'); 
-
-  
-  $('[contenteditable]').live('focus', function() {
-      $('#editing').fadeIn();
-  });
-  
-  $('#savedraft').bind('click', function() {
-    var userVersion = new String($('#container').html());
-    localStorage['userEdits'] = userVersion;
-    $('#editing').append("<p>Draft saved!</p>");
-    return false;    
-  });
-  
-  $('#save').bind('click', function() {
-      
-      var thisVersion = $('#container').html();
-      $.ajax({
-        url: '{% url useredit %}',
-        type: 'POST',
-        data: {'new': thisVersion, 'lang': 'en'},
-        success: function() {
-            $('#editing').append("<p>All changes saved!</p>");
-            localStorage.clear();
-        }
-      });
-      return false;
-  });
-  
-  checkEdits();
-});
-
-function checkEdits() {        
-    if ( localStorage['userEdits'] ) {
-        $('#container').replaceWith(localStorage['userEdits']);
-    } 
-}
-
-</script>
-
-
-{% endif %}
 
 
 </body>
