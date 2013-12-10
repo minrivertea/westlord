@@ -1,4 +1,4 @@
-{% load django_static %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html>
@@ -16,13 +16,13 @@
 	<meta name="robots" content="ALL" />
 	<title>西海油气联营公司 - The Decommissioning Expertise Your Project Needs</title>
 	
-	<script src="/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+	<script src="{% static 'js/jquery-1.8.1.min.js' %}" type="text/javascript"></script>
     
     <!--BOOTSTRAP FILES -->
-	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/bootstrap.min.css' %}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/bootstrap-responsive.min.css' %}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-responsive.min.css' %}" />
 	
-    <script src="{% staticfile '/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
 
     
 <style type="text/css">
@@ -130,7 +130,7 @@ blockquote img {
 }
 
 #case-studies .carousel .container {
-  background: url({% staticfile '/images/back2.png' %}) repeat top left; 
+  background: url({% static 'images/back2.png' %}) repeat top left; 
   position: relative;  
   box-shadow: 0 1px 8px #d1d1d1 inset;
   border-radius: 10px;
@@ -243,7 +243,7 @@ h2.featurette {
 				<li><a href="#contact">联系我们</a></li>
 			</ul>
             <ul class="nav pull-right">
-                <li><a href="/en/" alt="English" class="cn"><img src="{% staticfile '/images/en.png' %}" /></a></li>
+                <li><a href="/en/" alt="English" class="cn"><img src="{% static 'images/en.png' %}" /></a></li>
             </ul>
 	    </div>
       </div>
@@ -253,7 +253,7 @@ h2.featurette {
 
 <div class="main-banner">
     <div class="item">
-        <img src="{% staticfile '/images/feature2.jpg' %}" />
+        <img src="{% static 'images/feature2.jpg' %}" />
         <div class="container">
             <div class="caption">
                 <p class="lead">从前端研究到平台拆除，我们的国际油气专业知识满足您的项目需求&raquo;</p>
@@ -337,8 +337,8 @@ h2.featurette {
   <h2 class="featurette">关于我们</h2>
   <div class="row">
      <div class="span3">
-        <img src="/images/alex-west.jpg" />
-        <img src="/images/dns.jpg" />
+        <img src="{% static 'images/alex-west.jpg' %}" />
+        <img src="{% static 'images/dns.jpg' %}" />
      </div>
      <div class="span9">
         <p>创立者艾利克斯.韦斯特拥有新建和扩建项目，操作和维护合同及战略性商务管理的经历，以其在目标区域，技术发展以及海上石油平台拆除的丰富经验主要从事于海上石油和天然气工程。艾利克斯.韦斯特目前就任<a href="http://www.decomnorthsea.com">北海拆除</a>的副主席和总监，并在该组织成立时与<a href="http://www.scottish-enterprise.com">苏格兰工商委</a>员会以及英国能源暨气候变化部的早期会谈中起到帮助作用。他是北海拆除和英国石油和天然气公司年会组织委员会的成员，在多个国际会议和大学教育计划中发表过演讲。他是一名特许工程师，结构工程师学会成员，以及英国特许管理协会会员。
@@ -358,31 +358,31 @@ h2.featurette {
             <p>我们除了执行过几个行业领先企业的秘密任务，合作过的客户还包括:</p>
         </div>
         <div class="span3">
-            <img src="/images/petro-canada.jpg"/>
+            <img src="{% static 'images/petro-canada.jpg' %}"/>
         </div>
         <div class="span3">
-            <img src="/images/veba-red.jpg"/>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span3">
-            <img src="/images/otm.jpg"/>
-        </div>
-        <div class="span3">
-            <img src="/images/optimus.jpg"/>
-        </div>
-        <div class="span3">
-            <img src="/images/cm.jpg"/>
-            <img src="/images/petrofac.jpg"/>
-        </div>
-        <div class="span3">
-            <img src="/images/dns.jpg"/>
-            <img src="/images/peterson.jpg"/>
+            <img src="{% static 'images/veba-red.jpg' %}"/>
         </div>
     </div>
     <div class="row">
         <div class="span3">
-                <img src="/images/aker-solutions.jpg"/>
+            <img src="{% static 'images/otm.jpg' %}"/>
+        </div>
+        <div class="span3">
+            <img src="{% static 'images/optimus.jpg' %}"/>
+        </div>
+        <div class="span3">
+            <img src="{% static 'images/cm.jpg' %}"/>
+            <img src="{% static 'images/petrofac.jpg' %}"/>
+        </div>
+        <div class="span3">
+            <img src="{% static 'images/dns.jpg' %}"/>
+            <img src="{% static 'images/peterson.jpg' %}"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+                <img src="{% static 'images/aker-solutions.jpg' %}"/>
         </div>
     </div>
 </div>
@@ -437,7 +437,7 @@ $(document).ready( function() {
       
       var thisVersion = $('#container').html();
       $.ajax({
-        url: '{% url useredit %}',
+        url: '{% url "useredit" %}',
         type: 'POST',
         data: {'new': thisVersion, 'lang': 'en'},
         success: function() {

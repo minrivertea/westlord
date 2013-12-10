@@ -4,7 +4,7 @@ import os
 PROJECT_PATH = os.path.abspath(os.path.split(__file__)[0])
 
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -44,11 +44,20 @@ USE_I18N = False
 USE_L10N = False
 
 
-MEDIA_ROOT = os.path.join(PROJECT_PATH, "static")
-ADMIN_MEDIA_PREFIX = '/admin/media/'
+MEDIA_ROOT =                        os.path.join(PROJECT_PATH, 'media')
+MEDIA_URL =                         '/media/'
+STATIC_ROOT =                       os.path.join(PROJECT_PATH, 'static')
+STATIC_URL =                        '/static/'
+STATICFILES_DIRS = ()
+STATICFILES_FINDERS = (
+                                    'django.contrib.staticfiles.finders.FileSystemFinder',
+                                    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#                                    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = ''
+SECRET_KEY = '12345'
 
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
@@ -84,21 +93,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'django.contrib.staticfiles',
     'django.contrib.admin',
-    'django.contrib.sitemaps',
-    'django_static',
     'website',
     'sorl.thumbnail',
 )
 
 
-
-# django static information
-DJANGO_STATIC_SAVE_PREFIX = '/tmp/cache-forever/westlord'
-DJANGO_STATIC_NAME_PREFIX = '/cache-forever/westlord'
-DJANGO_STATIC = True
-DJANGO_STATIC_MEDIA_URL = 'http://static.westlord.co.uk'
-MEDIA_URL = '/'
 
 try:
     from local_settings import *

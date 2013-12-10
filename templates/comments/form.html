@@ -1,6 +1,6 @@
 {% load comments i18n %}
 <form action="{% comment_form_target %}" method="post">
-	<input type="hidden" name="next" value="{% url blog_entry entry.slug %}#{{ comment.object_pk }}" />
+	<input type="hidden" name="next" value="" />
   {% for field in form %}
     {% if field.is_hidden %}
       {{ field }}

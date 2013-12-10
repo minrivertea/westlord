@@ -420,7 +420,7 @@ $(document).ready( function() {
       
       var thisVersion = $('#container').html();
       $.ajax({
-        url: '{% url useredit %}',
+        url: '{% url "useredit" %}',
         type: 'POST',
         data: {'new': thisVersion, 'lang': 'en'},
         success: function() {

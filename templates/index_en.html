@@ -1,4 +1,4 @@
-{% load django_static %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html>
@@ -20,10 +20,10 @@
 	<script src="/js/jquery-1.8.1.min.js" type="text/javascript"></script>
     
     <!--BOOTSTRAP FILES -->
-	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/bootstrap.min.css' %}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{% staticfile '/css/bootstrap-responsive.min.css' %}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-responsive.min.css' %}" />
 	
-    <script src="{% staticfile '/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
 
     
 <style type="text/css">
@@ -131,7 +131,7 @@ blockquote img {
 }
 
 #case-studies .carousel .container {
-  background: url({% staticfile '/images/back2.png' %}) repeat top left; 
+  background: url({% static 'images/back2.png' %}) repeat top left; 
   position: relative;  
   box-shadow: 0 1px 8px #d1d1d1 inset;
   border-radius: 10px;
@@ -255,7 +255,7 @@ h2.featurette {
 				<li><a href="#contact">Contact</a></li>
 			</ul>
             <ul class="nav pull-right">
-                <li><a href="/zh/" alt="中文" class="cn"><img src="{% staticfile '/images/cn.png' %}" /></a></li>
+                <li><a href="/zh/" alt="中文" class="cn"><img src="{% static 'images/cn.png' %}" /></a></li>
             </ul>
 	    </div>
       </div>
@@ -265,7 +265,7 @@ h2.featurette {
 
 <div class="main-banner">
     <div class="item">
-        <img src="{% staticfile '/images/feature2.jpg' %}" />
+        <img src="{% static 'images/feature2.jpg' %}" />
         <div class="container">
             <div class="caption">
                 <p class="lead">From feasibility to decommissioning, the international oil & gas expertise your project needs &raquo;</p>
@@ -299,7 +299,7 @@ h2.featurette {
 
 <blockquote>
     <div class="container">
-        <img src="{% staticfile '/images/alex-west-small.jpg' %}" />
+        <img src="{% static 'images/alex-west-small.jpg' %}" />
         <p>&ldquo;More and more companies are <strong>actually increasing field value</strong> in mature basins through effective decommisioning of oil & gas infrastructure. We help you create integrated late-life asset management strategies centred around your environmental responsibilities which enable you to safely and effectively reuse and recycle your assets.&rdquo; <span class="name">Alex West, Director</span></p>
     </div>
 </blockquote>
@@ -359,8 +359,8 @@ h2.featurette {
   <h2 class="featurette">About Us</h2>
   <div class="row">
      <div class="span3">
-        <img src="/images/alex-west.jpg" />
-        <img src="/images/dns.jpg" />
+        <img src="{% static 'images/alex-west.jpg' %}" />
+        <img src="{% static '/images/dns.jpg' %}" />
      </div>
      <div class="span9">
         <p><strong>Alex West, the founder,</strong> has experience of greenfield and brownfield projects, operations and maintenance contracts and strategic business management, principally in offshore oil & gas engineering with considerable experience of strategic business plan development in targeted regional and technical growth as well as in decommissioning.</p>
@@ -382,31 +382,31 @@ h2.featurette {
             <p>We have worked with leading companies on a number of confidential assignments, as well as the following clients:</p>
         </div>
         <div class="span3">
-            <img src="/images/petro-canada.jpg"/>
+            <img src="{% static 'images/petro-canada.jpg' %}"/>
         </div>
         <div class="span3">
-            <img src="/images/veba-red.jpg"/>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span3">
-            <img src="/images/otm.jpg"/>
-        </div>
-        <div class="span3">
-            <img src="/images/optimus.jpg"/>
-        </div>
-        <div class="span3">
-            <img src="/images/cm.jpg"/>
-            <img src="/images/petrofac.jpg"/>
-        </div>
-        <div class="span3">
-            <img src="/images/dns.jpg"/>
-            <img src="/images/peterson.jpg"/>
+            <img src="{% static 'images/veba-red.jpg' %}"/>
         </div>
     </div>
     <div class="row">
         <div class="span3">
-            <img src="/images/aker-solutions.jpg" />
+            <img src="{% static 'images/otm.jpg' %}"/>
+        </div>
+        <div class="span3">
+            <img src="{% static 'images/optimus.jpg' %}"/>
+        </div>
+        <div class="span3">
+            <img src="{% static 'images/cm.jpg' %}"/>
+            <img src="{% static 'images/petrofac.jpg' %}"/>
+        </div>
+        <div class="span3">
+            <img src="{% static 'images/dns.jpg' %}"/>
+            <img src="{% static 'images/peterson.jpg' %}"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <img src="{% static 'images/aker-solutions.jpg' %}" />
         </div>
     </div>
 </div>
