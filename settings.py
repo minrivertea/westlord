@@ -40,6 +40,8 @@ LANGUAGE_CODE = 'en-gb'
 SITE_ID = 1
 
 
+ALLOWED_HOSTS = ['.westlord.co.uk']
+
 USE_I18N = False
 USE_L10N = False
 
