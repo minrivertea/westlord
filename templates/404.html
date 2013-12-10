@@ -1,35 +1,63 @@
 <html>
 <head>
-    <title>Page not found (404) - WestIsEast</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="keywords" content="Chris West, westiseast.co.uk, China, photography, Chinese, Fuzhou, photos, black and white, art, blog, life in China" />
-    <meta name="description" content="The page you're looking for can't be found." />
-    <meta name="copyright" content="Chris West" />
-    <meta name="creator" content="Chris West" />
-    <meta http-equiv="language" content="English" />
-    <meta name="generator" content="Django" />
-    <meta name="google-site-verification" content="Rt7aZU30wexEzi6zMnH-4Bpis48i7qidp-FAsNOVT6I" />
-<link rel="stylesheet" type="text/css" media="screen" href="/static/css/styles.css" />
 
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="en" http-equiv="Content-Language" />
+	<meta content="{% block metadescription %}{% endblock %}" name="description" />
+	
+	
+	<meta name="msvalidate.01" content="" />
+  	<meta name="google-site-verification" content="" />
+	<meta name="y_key" content="" />
+    <meta name="p:domain_verify" content="" /> 
+	
+	
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="generator" content="Django - http://www.djangoproject.com" />
+	<meta name="DC.format" content="text/html" />
+	<meta name="DC.type" content="Django Site" />
+	<meta name="robots" content="ALL" />
+	
+	<title>Page Not Found (404)</title>
 
-              
+	<style type="text/css">
+	
+	   #error {
+	     position: absolute;
+	     width: 700px;
+	     height: 280px;
+	     top:0;
+	     right: 0;
+	     bottom: 0;
+	     left: 0;
+	     margin: auto;
+	     text-align: center;
+	     font-family: Helvetica, sans-serif;
+	     line-height: 2.4em;
+	   }
+	   
+	   #error h1 {
+	     color: #F88400;
+	     margin: 0;  
+	   }
+	   
+	   #error p {
+	      font-size: 1.2em;
+	   }
+	
+	</style>
+	
 </head>
 
-<body>
-<div id="container">
 
 
-{% include "snippets/header.html" %}
+<body>	 
 
-
-
-<div id="main">
-
-<h2>404 Error - it seems the page you're looking for can't be found. Try <a href="/">returning to the homepage</a> and starting again or check that you've typed the right URL in the browser address bar.</h2>
-</div>
-
-</div>
-
+    <div id="error">
+        <h1>Whoops! We can't find the page you're looking for.</h1>
+        <p>It might have been moved, or it's also possible you typed the URL incorrectly or clicked on a broken link. Sorry, please navigate back to the <a href="/">homepage</a> and try again.</p>
+    </div>
 
 </body>
+
 </html>
