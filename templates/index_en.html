@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="" />
-    <meta name="copyright" content="Chris West" />
+    <meta name="copyright" content="Alex West" />
     <meta name="creator" content="Chris West" />
     <meta name="generator" content="Django - http://www.djangoproject.com" />
     <meta name="google-site-verification" content="Rt7aZU30wexEzi6zMnH-4Bpis48i7qidp-FAsNOVT6I" />
@@ -16,160 +16,317 @@
 	<meta name="robots" content="ALL" />
 	<title>Westlord Associates UK Ltd. - The Expertise Your Project Needs</title>
 	
-	
-	<script src="{% static 'js/jquery-1.8.1.min.js' %}" type="text/javascript"></script>
     
-    <!--BOOTSTRAP FILES -->
-	<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap-responsive.min.css' %}" />
-	
-    <script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <!--PURE CSS -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	<script src="//code.jquery.com/jquery-1.9.0.min.js"></script>
+	<script src="{% static 'js/slider.js' %}"></script>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
     
 <style type="text/css">
 
-body {
-  font-size: 14px;
+body, .pure-g [class *= "pure-u"] {
+  font-family: 'Roboto', Helvetica, sans-serif;
   line-height: 1.8em;   
 }
 
-.navbar-inverse .brand {
-  font-weight: bold;
-  color: #fff; 
-  letter-spacing: -0.5px;  
+p, ul {
+  font-size: 14px;   
 }
 
-.navbar-wrapper {
+p {
+  margin: 0;   
+}
+
+.container {
+  max-width: 1000px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;   
+}
+
+.pure-g > * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.all-pad {
+  padding: 1em;
+}
+
+.half-pad {
+  padding: 0.5em;   
+}
+
+.l-pad {
+  padding-left: 1em;   
+}
+
+.r-pad {
+  padding-right: 1em;   
+}
+
+.t-pad {
+  padding-top: 1em;    
+}
+
+.b-pad {
+  padding-bottom: 1em;    
+}
+
+.button {
+  background: green;
+  float: left;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 2px;
+  color: #fff;
+  text-decoration: none;  
+}
+
+.button:hover {
+  opacity: 0.9;   
+}
+
+#top {
+  background: url("{% static 'images/feature3.jpg' %}") no-repeat fixed 0 0 #333;         
+}
+
+#header {
+  position: relative;
+  z-index: 200; 
+  margin-top: 0px;
+  margin-bottom: 40px;
+  height: 480px;
+}
+
+#header img.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 9;
+}
+
+.navbar {
+  position: relative;
+  padding: 10px 15px;
+  margin: 0;
+}
+
+.navbar .back {
+    background: none repeat scroll 0 0 #0b2130;
+    height: 100%;
     left: 0;
-    margin-bottom: -90px;
-    margin-top: 20px;
+    opacity: 0.6;
     position: absolute;
-    right: 0;
     top: 0;
-    z-index: 10;
+    width: 100%;
+    border-radius: 4px;
+    z-index: 9;
+}
+
+.navbar .contents {
+  position: relative;
+  z-index: 10;   
+}
+
+.navbar ul.nav {
+  list-style-type: none;
+  display: inline;
+  margin: 0;
+  padding: 0;   
+}
+
+.navbar ul.nav li {
+  display:inline;   
+  margin: 0 1em 0 0;
+  font-size: 18px;
+}
+
+.navbar ul.nav li a {
+  color: #c1c1c1;
+  font-size: 14px ;
+  text-decoration: none;  
+}
+
+.navbar ul.nav li.right {
+  float: right;   
+}
+
+.navbar ul.nav li#logo a {
+  color: #fff;
+  font-size: 20px; 
+}
+
+.navbar ul.nav li a:hover, .navbar ul.nav li#logo a:hover {
+  color: #ff7800;
+  border-bottom: 1px solid #ff7800;   
 }
 
 .cn img {
   box-shadow: 0 0px 8px #555;   
 }
 
-.divider {
-   margin: 60px 0;   
-}
-
-.main-banner {
-  margin-bottom: 40px;   
-}
-
-.main-banner img {
+.caption {
     position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 500px;
-} 
-
-.main-banner .item {
-  height: 500px;   
+    right: 0;
+    text-align: right;
+    top: 55px;
 }
 
-.main-banner .container {
-    position: relative;
-    z-index: 9;
+.whiteback {
+  background: #fff;
+  position: relative;
+  z-index: 10;    
 }
 
-.main-banner .caption {
-    background-color: transparent;
-    margin-top: 200px;
-    max-width: 250px;
-    padding: 0 20px;
-    position: static;
-    font-size: 30px;
+.divider {
+  margin: 40px 0;
+  height: 1px;
+  color: #e1e1e1;
+  border: none;
+  background: #e1e1e1;   
 }
 
-.main-banner .caption .lead {
-    color: #FFFFFF;
-    line-height: 1.25;
-    margin: 0;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-    font-size: 25px;
+#marketing {
+  padding: 40px 0;
+  position: relative;
 }
 
-.marketing {
-  margin-bottom: 60px;   
-}
-
-.marketing h2 {
-  font-weight: normal; 
-  font-size: 25px;  
-}
-
-blockquote {
-  margin-bottom: 60px;   
-}
-
-blockquote p {
-    font-size: 21.5px;
-    font-weight: 300;
-    line-height: 2em;
-    margin-bottom: 0;
-}
-
-blockquote p .name {
-  font-style: italic;
-  color: red;   
-}
-
-
-blockquote img {
-  float: left;
-  margin: 0 30px 0 0;   
-}
-
-#case-studies {
+#marketing div {
   position: relative;   
 }
 
-#case-studies .carousel .container {
-  background: url({% static 'images/back2.png' %}) repeat top left; 
-  position: relative;  
-  box-shadow: 0 1px 8px #d1d1d1 inset;
-  border-radius: 10px;
-}
-
-#case-studies .carousel .carousel-inner .item {
-  padding: 2% 3%;
-  width: 94%;
-}
-
-#case-studies .carousel .carousel-inner .item h3 {
-  margin: 0 0 10px 0;
-}
-
-.carousel {
-  line-height: 1.8em;   
-}
-
-.carousel .count {
+#marketing .back, #quote .back, #case-studies .back {
+  background: #fff;
+  opacity: 0.9;
   position: absolute;
-  right: 3%;
-  font-weight: bold;   
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;   
 }
 
-.carousel-control {
-  top: -50px;   
+.marketing #two {
+  position: relative;
 }
 
-.carousel-control.left {
-  right: 65px;
-  left: inherit;   
+.marketing #three {
+  position: relative;
 }
 
-h2.featurette {
-  font-size: 50px;
-  letter-spacing: -1px;
+
+h2 {
   font-weight: normal; 
-  margin: 0 0 30px 0;  
+  font-size: 25px;
+  margin: 0 0 10px 0;
+  color: #0b2130;  
+}
+
+h3 {
+  margin: 0 0 0 0;   
+}
+
+#quote {
+  position: relative;
+  padding: 60px 0;
+  margin: 0px 0;
+  color: ;
+}
+
+#quote .back {
+  background: #fff;
+  opacity: 1;   
+}
+
+#quote p, .caption h1 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.8em;
+}
+
+#quote p .name {
+  font-style: italic;
+  color: #ff7800;   
+}
+
+#case-studies {
+  position: relative;
+  margin: 0px;
+  padding: 40px 0;
+  text-align: ;
+  position: relative;
+  color: ;
+}
+
+
+#case-studies .back {
+  background: #e1e1e1;
+  opacity: 0.8;   
+}
+
+#case-studies p, #about p {
+  margin: 0 0 15px 0;   
+}
+
+#case-studies .container {
+}
+
+#case-studies #carousel {
+  margin: auto;    
+}
+
+
+#case-studies #carousel > ul {
+  margin: 0;
+  padding: 0;
+}
+
+#case-studies #carousel { position: relative; overflow: auto; }
+#case-studies #carousel > ul > li { list-style: none; }
+#case-studies #carousel > ul > li { float: left; }
+#case-studies .unslider-arrow {
+	width: 0; 
+	height: 0; 
+	border-top: 200px solid transparent;
+	border-bottom: 200px solid transparent;
+	border-left: 200px solid #333;
+  display: block;
+  position: relative;
+}
+
+#case-studies .unslider-arrow .text {
+    color: #fff;
+    font-size: 40px;
+    left: -165px;
+    position: absolute;
+    top: -16px;
+}
+
+#case-studies .unslider-arrow:hover {
+  width: 0; 
+  height: 0; 
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-left: 200px solid #444;
+  display: block;    
+}
+
+
+
+
+#about {
+  padding: 40px 0;
+  margin: 0px 0;
+  background: url('{% static "images/back2.png" %}') repeat fixed top left #e1e1e1;   
+}
+
+#clients {
+  padding: 40px 0;   
 }
 
 #clients .row div {
@@ -182,21 +339,6 @@ h2.featurette {
   margin-bottom: 20px;
 }
 
-#clients .row div.span6 {
-  text-align: left;   
-}
-
-#clients .row div.span6 p {
-  font-size: 18px;   
-}
-
-#clients .row div:last-child {
-  border-right: none;
-}
-
-#clients .row div p {
-  padding-right: 40px;   
-}
 
 
 #contact {
@@ -205,23 +347,6 @@ h2.featurette {
 
 </style>
 
-<!--[if lte IE 8]>
-<style type="text/css">
-
-#clients .row div p {
-  padding-right: 0;
-}
-
-#clients .row div {
-  border-right: none;
-  padding: 0;
-}
-
-#clients .row div.span3 {
-  width: 240px;   
-}
-</style>
-<![endif]-->
                                 
 </head>
 
@@ -241,202 +366,276 @@ h2.featurette {
 
 </script>
 
+<div id="top" data-type="background" data-speed="5">
 
-<div class="navbar-wrapper">
-  <div class="container">
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <a class="brand">Westlord Associates UK Ltd.</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-				<li><a href="/">Home</a></li>
-				<li><a href="#about">About Us</a></li>
-				<li><a href="#case-studies">Case studies</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-            <ul class="nav pull-right">
-                <li><a href="/zh/" alt="中文" class="cn"><img src="{% static 'images/cn.png' %}" /></a></li>
-            </ul>
-	    </div>
-      </div>
-    </div>  
-  </div>
-</div>
-
-<div class="main-banner">
-    <div class="item">
-        <img src="{% static 'images/feature2.jpg' %}" />
+    <!-- HEADER -->
+    <div id="header" class="pure-g t-pad">
+        
         <div class="container">
-            <div class="caption">
-                <p class="lead">From feasibility to decommissioning, the international oil & gas expertise your project needs &raquo;</p>
+            
+            <div class="navbar pure-g">
+                <div class="back pure-u-1"></div>
+                <div class="contents pure-u-1">
+                    <ul class="nav">
+    				    <li id="logo"><a href="/">Westlord Associates UK Ltd.</a></li>
+    				    <li><a href="#about">About Us</a></li>
+    				    <li><a href="#case-studies">Case studies</a></li>
+    				    <li><a href="#contact">Contact</a></li>
+    				    <li class="right"><a href="/zh/" alt="中文" class="cn"><img src="{% static 'images/cn.png' %}" /></a></li>
+    			     </ul>
+                </div>
             </div>
+            
+            <div class="caption pure-u-1">
+                <h1>From feasibility to decommissioning, the international oil & gas expertise your project needs</h1>
+            </div>
+            
         </div>
     </div>
-  </div>
-</div>
+    <!-- END HEADER-->
 
-
-<div class="container marketing">
-    <div class="row">
-		<div class="span4">
-			<h2>A quick introduction</h2>
-			<p>Westlord Associates was formed in 1999 to carry out assignments in providing project management consultancy, asset management, execution of major projects and expert advice to clients throughout Europe and internationally. <br/><a href="#about">Read more &raquo;</a></p>
-		</div>
-		
-		<div class="span4">
-			<h2>Our areas of expertise</h2>
-			<p>We continue to focus on the international oil and gas industry and specialise in <strong>strategic business and project management consultancy</strong> with strong expertise in front-end studies, decommissioning, major project review, strategic business development and change management with strong regional expertise in the <strong>UK, Netherlands and Norway</strong> oil & gas markets.</p>
-		</div>
-		
-		<div class="span4">
-			<h2>How we can help you</h2>
-			<p>Westlord Associates has an excellent knowledge of the UK and worldwide oil & gas market and contacts at the highest level in a wide range of operators and supply chain companies.<br/><a href="#case－studies">Read case studies for examples of our work</a> or just <a href="#contact">contact us immediately</a></p>
-		</div>
-	</div>
-</div>	
-
-<hr class="divider">
-
-<blockquote>
-    <div class="container">
-        <img src="{% static 'images/alex-west-small.jpg' %}" />
-        <p>&ldquo;More and more companies are <strong>actually increasing field value</strong> in mature basins through effective decommisioning of oil & gas infrastructure. We help you create integrated late-life asset management strategies centred around your environmental responsibilities which enable you to safely and effectively reuse and recycle your assets.&rdquo; <span class="name">Alex West, Director</span></p>
+    <!-- INTRODUCTION -->
+    <div id="marketing" class="pure-u-1">
+      <div class="back"></div>
+      <div class="container pure-g">
+    		<div id="1" class="pure-u-1-3 r-pad">
+    			<h2>A quick introduction</h2>
+    			<p>Westlord Associates was formed in 1999 to carry out assignments in providing project management consultancy, asset management, execution of major projects and expert advice to clients throughout Europe and internationally. <br/><a href="#about" class="button">Read more about us &raquo;</a></p>
+    		</div>
+    		
+    		<div id="two" class="pure-u-1-3 l-pad r-pad">
+    			<h2>Our areas of expertise</h2>
+    			<p>We focus on the international oil and gas industry and specialise in <strong>strategic business and project management consultancy</strong> with strong expertise in front-end studies, decommissioning, major project review, strategic business development and change management.</p></p>
+    		</div>
+    		
+    		<div id="three" class="pure-u-1-3 l-pad">
+    			<h2>How we can help you</h2>
+    			<p>Westlord Associates has an excellent knowledge of the UK and worldwide oil & gas market and contacts at the highest level in a wide range of operators and supply chain companies.
+    			<a href="#contact" class="button">Contact us now</a>
+    			</p>
+    		</div>
+    		
+    		<hr class="divider"/>
+    		
+    		<div class="pure-u-1">
+    		We have strong regional expertise in the <strong>UK, Netherlands and Norway</strong> oil & gas markets and have experience of working in Canada, South East Asia, North Africa and Brazil.
+    		</div>
+      </div>
     </div>
-</blockquote>
+    <!-- END INTRODUCTION -->
+  
+    <!-- QUOTE -->
+    <div id="quote" class="pure-g">
+      <div class="back"></div>
+      <div class="container pure-g">
+        <img class="pure-u-4-24 r-pad" src="{% static 'images/alex-west-small.jpg' %}" />
+        <p class="pure-u-10-24 l-pad r-pad">&ldquo;
+        
+        Companies are increasing field value in mature basins through effective late-life strategies which include decommissioning of oil & gas infrastructure. We help you create integrated late-life asset management strategies centred around your environmental responsibilities which enable you effectively to and reuse and recycle your assets.
+        </p>
+        <p class="pure-u-10-24 l-pad">
+         We have experience of creating projects from the initiation stage which turns an entrepreneurial idea into a workable business proposition.  We use that experience to build contacts with customers and regulators, to define the scope and create a project execution organisation.&rdquo;
+                       
+        <br/><span class="name">Alex West, Director</span></p>
+      </div>
+    </div>
+    <!-- END QUOTE -->
+    
 
-<hr class="divider">
-
-<div id="case-studies">
-    <div class="container"><h2 class="featurette">Case studies</h2></div>
-    <div id="myCarousel" class="carousel slide">
+<div id="case-studies" class="pure-g">
+    <div class="back"></div>
     <div class="container">
-   
-    <div class="carousel-inner">
-    <div class="active item">
-	       <span class="count">1/4</span> 
+                                
+        <div id="carousel" class="pure-u-18-24">
+           
+           <ul>
+           <li class="pure-u-1">
 	       <h3>Oil & Gas Growth Strategy Study</h3>
     		<p>This client is a large (7,000+ people) company with a strong business in the Asia-Pacific region including oil & gas clients. They were looking to grow a presence in oil and gas in the UK and Europe as part of a general strategy to expand its energy – specifically upstream oil and gas - business worldwide with three clear aims: <strong>grow company size, increase geographical offering to existing clients, increase exposure to oil & gas and energy sector as part of company diversification.</strong></p>
             <p>The client wanted to explore the possibilities for acquisition led and organic growth with companies which can fully embrace the client’s culture, which will add capability, will have synergy with the client’s existing businesses, will be meaningful to clients and will be significant in driving the client’s growth.</p>
             <p>A single acquisition was unlikely to be sufficient;  there are not enough large companies with the right attributes to be able to find a good match and acquisition of a single small company will not create the right conditions for appropriately rapid organic growth.  Hence a combination of purchases and selective recruitment of staff was to be considered.</p>
             <p>We prepared a strategic review of acquisition targets in the upstream energy sector in United Kingdom and Europe, concentrating on front-end consultancies but also considering larger, vertically integrated companies who complemented the clients existing skillset.  We used our extensive knowledge of the sector as well as focused searches of industry databases to deliver the report to the client’s satisfaction and in a very rapid timescale.  The  study has led to further work for the same client, including selective interviews and due-diligence with selected targets.</p>
-         </div>
+         </li>
          
-         <div id="2" class="item">
-            <span class="count">2/4</span>
+         <li class="pure-u-1">
             <h3>Oil & Gas Decommissioning Strategy</h3>
             <p>The client is a large engineering and programme management company with extensive experience in the nuclear remediation industry (amongst other businesses), employing over 57,000 people worldwide and annual revenues of nearly $10 billion.</p>
             <p>They were considering an entry into the highly regulated UK and Norwegian offshore oil & gas decommissioning market and were looking to gain an insight into the available market opportunities, the capabilities required to address such work, the partnerships or acquisitions which would be necessary to deliver a complete market offer.</p>
             <p>Westlord Associates delivered a market assessment looking at both the long-term and near-term market, looking closely at the market segments involved and the range of technologier required.  </p>
             <p>Using our industry knowledge gained through the leadership roles taken in industry associations such as Decom North Sea and in organising major regional conferences, we focused on 3 specific projects and on the particular combination of technical and commercial considerations which would be required to deliver value both to customers and to the client.</p>
             <p>Following this successful study, a similar study was carried out for a UK based company approaching the same market but with a different skill-set and different commercial objectives.</p>
-          </div>
+          </li>
           
-          <div id="3" class="item">
-            <span class="count">3/4</span>
+          <li class="pure-u-1">
              <h3>Major Project Peer Review – Offshore Decommissioning</h3>
              <p>The client is a large UK based energy operator with interests throughout Europe.  Following acquisition of a large share in a Norwegian asset, the client was asked to participate in a “Cold Eyes” review of a major project - valued at over £200 million - which was being planned by the asset’s majority shareholder and operator. </p>
               <p>The client required specific knowledge of the Norwegian business environment and regulations, together with extensive experience of major project management, planning and cost estimating and detailed technical knowledge of the project scope.  This combination of skills was not within the client’s organisation so Westlord Associates was asked to lead part of the review, involving review of project documentation, interviews with project personnel, facilitated meetings with other technical experts and structured feedback to the operator.</p>
 <p>The assignment was carried out partly in our own office and partly at the operator’s office in Norway and Westlord Associates continues to provide advice to our client on this project as it develops into the next phase.</p>
-         </div>
+         </li>
          
-         <div id="4" class="item">
-            <span class="count">4/4</span>
+         <li class="pure-u-1">
             <h3>Financial Assessment and Cost Estimates for Decommissioning Liabilities</h3>
             <p>Through our involvement and Board membership of the industry trade association, <a href="http://www.decomnorthsea.com">Decom North Sea</a>, Westlord Associates has taken a leading position in helping companies to understand the market for decommissioning of offshore oil & gas facilities throughout the North Sea.  This understanding is necessary for both operating companies and also contractors who will be engaged to carry out the physical work of platform and facility removal.</p>
 <p>Westlord Associates has carried out a review of the forecasted UK decommissioning market for Decom North Sea and has also provided independent commentary on the Oil & Gas UK Decommissioning Insights (which forecast the overall value and timing of the UK offshore decommissioning market to 2050) and to the UK Treasury consultation on decommissioning tax relief. </p>
 <p>Our managing director, Alex West, has led teams in decommissioning consultancy and execution for over 8 years and is now able to offer an independent service, ranging from advice on decommissioning provisions, estimates and project forecasts to independent and impartial review of the estimating process to assessment of decommissioning costs and the role of technical expert in an arbitration and cost-redetermination process (for example as part of the Decommissioning Cost Provision Deed review).<p>
 <p>Alex West has taken a leading role in championing a policy of involvement with lawyers, accountants, insurer, finance advisers and other professional service providers in order to provide a holistic consulting service and has given presentations to international conferences, specialist seminars and in-house training sessions.  Westlord Associates is committed to enhancing the understanding of the relationship between cost forecasts and actual project costs so that operators and contractors alike can predict future expenditure and investment with as much precision as possible and ultimately to increase the value which can be obtained from oil & gas assets.</p>
-            </div>
-            </div>
-         <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-         <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-     </div>         
+            </li>
+                  
+         <li class="pure-u-1">
+            <h3>Development of new project</h3>
+            <p>This client is a Norwegian company keen to develop its services both vertically integrated from its current offering and in a different region of the world – eastern Canada.  The company saw a commercial opportunity and engaged Westlord Associates to construct a pre-feasibility project and manage a local team to:</p>
+            <ul>
+                <li>Liaise with the local government officials and supply chain</li>
+                <li>Identify locations for the project site infrastructure</li>
+                <li>Identify customers and customer requirements</li>
+                <li>Conduct local engineering studies to support the initial project planning stages</li>
+                <li>Liaise with company head office for technical and commercial support</li>
+            </ul>
+            
+            <p>The project was in competition with other players and the objective was to progress the project sufficiently to allow the client’s Board to take decisions to commit further funds. Westlord Associates mobilised in-country and successfully put a structure around a pre-feasibility process to define the opportunity, describe it in sufficient detail to explain to suppliers and potential clients, prepare outline schedules and budgets and took the necessary steps to achieve the tasks defined and support the Board.</p>
+            
+         </li>
+      </div> 
+      
+      <span class="pure-u-1-24"></span>
+      
+      <span class="pure-u-4-24">
+        <a href="#" class="unslider-arrow next"><span class="text">Next</span></a>
+        </span>
+        
+      </div>
+    </div>
 </div>
+<!-- END CASE STUDIES -->
 
-<hr class="divider">
+</div>
+<!-- END TOP -->
 
-<div class="container" id="about">
-  <h2 class="featurette">About Us</h2>
-  <div class="row">
-     <div class="span3">
+<div id="about" data-type="background" data-speed="5">
+  <div class="container pure-g">
+          
+     <div class="pure-u-7-24">
         <img src="{% static 'images/alex-west.jpg' %}" />
-        <img src="{% static '/images/dns.jpg' %}" />
      </div>
-     <div class="span9">
-        <p><strong>Alex West, the founder,</strong> has experience of greenfield and brownfield projects, operations and maintenance contracts and strategic business management, principally in offshore oil & gas engineering with considerable experience of strategic business plan development in targeted regional and technical growth as well as in decommissioning.</p>
-        <p>He has managed international development projects for operators and contractors, been Technical Director for a leading service company and held P&L responsibility as general manger and Operations Director. He is a Chartered Engineer, Fellow of the Institution of Structural Engineers and a Member of the Chartered Management Institute</p>
-        <p>He is currently Vice-Chairman and a Director of <a href="http://www.decomnorthsea.com">Decom North Sea</a>, and is on the organising committee for the annual <a href="http://www.offshoreenergytoday.com/uk-new-session-on-agenda-for-annual-offshore-decommissioning-conference/">Decom North Sea and Oil & Gas UK Offshore Decommissioning Conference</a>. He has spoken at international conferences and on university education programmes.</p>
+     
+     <div class="pure-u-17-24">        
+        <p><strong>Alex West, the founder,</strong> has experience of greenfield and brownfield projects, operations and maintenance contracting and strategic business management, principally in the offshore oil & gas sector.  He has considerable experience of strategic business plan development in regional and technical growth and in large project initiation and management as well as in decommissioning.</p>
 
+        <p>He has managed international development projects for operators and contractors, been Technical Director for a leading service company and held P&L responsibility as General Manager and Operations Director. He is a Chartered Engineer, Fellow of the Institution of Structural Engineers and a Member of the Chartered Management Institute.</p>
+
+        <p>Alex is currently Vice-Chairman and a Director of <a href="http://www.decomnorthsea.com">Decom North Sea</a>.  He has been on advisory and organising committees for international conferences and has at international conferences and on university education programmes.</p>
+        
+        
+
+    </div>
+    <div class="pure-u-7-24">
+        <img src="{% static '/images/dns.jpg' %}" />
+    </div>
+    <div class="pure-u-17-24">
         <h3>Our partners</h3>
         <p>We have a wide range of associates in technical, commercial and business administration disciplines who can be called on to provide services required for strategic business and project management consultancy.</p>
-      </div>
+
+    </div>
+      
    </div>
 </div>
 
-<hr class="divider">
 
-<div class="container" id="clients">
-    <div class="row">
-        <div class="span3">
-            <h2 class="featurette">Our clients</h2>
+<div id="clients">
+  <div class="container pure-g">
+   
+        <div class="pure-u-1-4 r-pad">            
+             <h2 class="pure-u-1">Our clients</h2>
             <p>We have worked with leading companies on a number of confidential assignments, as well as the following clients:</p>
         </div>
-        <div class="span3">
-            <img src="{% static 'images/petro-canada.jpg' %}"/>
+        <div class="pure-u-1-4">
+            <img class="pure-u-1" src="{% static 'images/petro-canada.jpg' %}"/>
         </div>
-        <div class="span3">
-            <img src="{% static 'images/veba-red.jpg' %}"/>
+        <div class="pure-u-1-4">
+            <img class="pure-u-1" src="{% static 'images/veba-red.jpg' %}"/>
         </div>
-        <div class="span3">
-            <img src="{% static 'images/otm.jpg' %}"/>
+        <div class="pure-u-1-4">
+            <img class="pure-u-1" src="{% static 'images/otm.jpg' %}"/>
         </div>
-    </div>
-    <div class="row">
+
         
-        <div class="span3">
+        <div class="pure-u-1-4">
             <img src="{% static 'images/optimus.jpg' %}"/>
         </div>
-        <div class="span3">
+        <div class="pure-u-1-4">
             <img src="{% static 'images/cm.jpg' %}"/>
             <img src="{% static 'images/petrofac.jpg' %}"/>
         </div>
-        <div class="span3">
+        <div class="pure-u-1-4">
             <img src="{% static 'images/dns.jpg' %}"/>
             <img src="{% static 'images/peterson.jpg' %}"/>
         </div>
-        <div class="span3">
+        <div class="pure-u-1-4">
             <img src="{% static 'images/aker-solutions.jpg' %}" />
             <img src="{% static 'images/HLNG-pos-RGB.jpg' %}" />
         </div>
     </div>
-
+  <hr class="divider">
+  </div>
 </div>
 
-<hr class="divider">
 
-<div class="container" id="contact">
-   <h2 class="featurette">Contact Us</h2>
-     <div class="row">
-        <div class="span5">
-	    {% if DEBUG %}{% else %}
-	    <div id="map"><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=West+Kilbride&amp;sll=37.0625,-95.677068&amp;sspn=55.849851,114.169922&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=West+Kilbride,+North+Ayrshire,+United+Kingdom&amp;ll=55.695149,-4.857158&amp;spn=5.030522,14.27124&amp;z=7&amp;output=embed"></iframe></div>
-	    {% endif %}
-	    </div>
-	    <div class="span7">
-		<p><strong>Get in touch with us now for information on how we can help with your project:</strong></p>
+<div id="contact">
+  <div class="container pure-g">
+   
+
+   {% if DEBUG %}
+   {% else %}
+   <div id="map" class="pure-u-11-24">
+   <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=West+Kilbride&amp;sll=37.0625,-95.677068&amp;sspn=55.849851,114.169922&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=West+Kilbride,+North+Ayrshire,+United+Kingdom&amp;ll=55.695149,-4.857158&amp;spn=5.030522,14.27124&amp;z=7&amp;output=embed"></iframe></div>
+   {% endif %}
+   <div class="pure-u-13-24">
+        <h2 class="pure-u-1">Contact Us</h2>
+        <p><strong>Get in touch with us now for information on how we can help with your project:</strong></p>
 		<p>
 		  <strong>Email:</strong> <a href="mailto:enquiries@westlord.co.uk">enquiries@westlord.co.uk</a><br/>
 		  <strong>Tel:</strong> +44 (0)7793 264 518
 		</p>
-		<p>12 Pantonville Road<br/>West Kilbride<br/>Ayrshire<br/>Scotland<br/>KA23 9NH</p>
+		<p>12 Pantonville Road<br/>West Kilbride<br/>Ayrshire<br/>United Kingdom<br/>KA23 9NH</p>
 		</div>
 	</div>
 </div>
 
 
 <script type="text/javascript">
-$('.carousel').carousel('pause')
+
+$(document).ready(function(){
+    $('div[data-type="background"]').each(function(){
+        var $bgobj = $(this); // assigning the object
+    
+        $(window).scroll(function() {
+            var yPos = -($(window).scrollTop() / $bgobj.data('speed')); 
+            
+            // Put together our final background position
+            var coords = '0 '+ yPos + 'px';
+
+            // Move the background
+            $bgobj.css({ backgroundPosition: coords });
+        }); 
+    }); 
+    
+    
+    /// THE SLIDER
+    var slider = $('#carousel').unslider();    
+    var data = slider.data('unslider');
+    
+    data.stop(); //  Pause Unslider
+
+    /// THE SLIDER ARROWS
+    $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];        
+        slider.data('unslider')[fn]();
+        return false;
+    });
+});
+        
 </script>
+    
 
 
 </body>
